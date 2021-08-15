@@ -1,0 +1,11 @@
+General:
+
+- broadcast type: every device can "hear" signal
+- retransmit available
+- hot pluggable
+- 2 MBit/s
+- Node: CAN_Tx & CAN_Rx (not used to communicate to other node == Digital Signals) => better use differential Signals (CAN transceiver)
+- Digital Signals => transceiver => Differential Signals (CANHigh & CANLow)
+- Node Controller + Transceiver
+- +- 5 V => noice cancelling == detecting potential deifference (+- 10V)
+- dominant: logic 0(CANHigh - CANLow = ~2V); recessive: logic 1 (CANHigh - CANLow = 0V)
