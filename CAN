@@ -1,5 +1,6 @@
-General:
+https://www.udemy.com/course/microcontroller-programming-stm32-timers-pwm-can-bus-protocol/learn/lecture/11896142#overview
 
+General:
 - broadcast type: every device can "hear" signal
 - retransmit available
 - hot pluggable
@@ -9,3 +10,25 @@ General:
 - Node Controller + Transceiver
 - +- 5 V => noice cancelling == detecting potential deifference (+- 10V)
 - dominant: logic 0(CANHigh - CANLow = ~2V); recessive: logic 1 (CANHigh - CANLow = 0V)
+
+CAN frame formats:
+- Data: CAN node message [StartFrame] -> [ArbitrationID==PriorityOfMessage] -> [DataLengthCode] -> [Data==8bytes==payload] -> [CRC] -> [ACK] -> [ACK Delimiter] ->[EndOfFrame] 
+- Remote
+- Error 
+- Overload
+
+Standard vs Extended CNA:
+- 11 vs 19 identifiers
+
+RTR (remote transmition request) bit:
+- 0 == data frame
+- 1 == remote == request for data from other node == no data field
+
+DLC (data length code)
+- number of bytes being transmitted
+
+CRC:
+- used for the error detection at the receiving end
+
+Arbitration:
+- dominant vs recessive
