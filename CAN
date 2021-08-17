@@ -32,3 +32,12 @@ CRC:
 
 Arbitration:
 - dominant vs recessive
+
+Can timing:
+- CLK == 25 MHz, CAN prescaler == 1, duration of 1 time quanta ==  prescaler / CLK
+http://www.bittiming.can-wiki.info/
+
+Can should be moved to the working mode == normal or something like that == HAL_Can_Start()
+
+Arbitration:
+- lower the ID -> higher the priority == dominant bit rules
