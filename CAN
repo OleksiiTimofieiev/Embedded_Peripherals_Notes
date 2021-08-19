@@ -1,5 +1,3 @@
-https://www.udemy.com/course/microcontroller-programming-stm32-timers-pwm-can-bus-protocol/learn/lecture/11896142#overview
-
 General:
 - broadcast type: every device can "hear" signal
 - retransmit available
@@ -41,3 +39,8 @@ Can should be moved to the working mode == normal or something like that == HAL_
 
 Arbitration:
 - lower the ID -> higher the priority == dominant bit rules
+
+CAN Interrupts (IRQ):
+-Tranmission request completed
+- Frame is received - STM RX FIFO 0 || 1 
+- Can status change or error
