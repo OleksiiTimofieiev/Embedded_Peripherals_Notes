@@ -1,0 +1,12 @@
+40 % duty cycle of the period CH1(1 sec) => 40 % - on, 60 % off
+
+Period = ARR = 10000 of delay
+Pulse value (capture and compare registor) CCR1 = ARR * 40% = 4000
+
+CNT (count value) < CCR1 == channel is being high <= polarity value is high
+
+Example:
+Time clock frequency == 50 000 000 Hz == 50 Mhz
+Prescaler = 4999
+ARR = 50000 / 4999 - 1 == 9999
+Pulse = (ARR * 0,40) / 100
